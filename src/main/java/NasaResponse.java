@@ -1,31 +1,29 @@
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.Date;
-
 public class NasaResponse {
-    String copyright;
-    String date;
-    String explanation;
-    String hdurl;
-    String media_type;
-    String service_version;
-    String title;
-    String url;
+    private String copyright;
+    private String date;
+    private String explanation;
+    private String hdurl;
+    private String mediaType;
+    private String serviceVersion;
+    private String title;
+    private String url;
 
     public NasaResponse(@JsonProperty("copyright") String copyright,
                         @JsonProperty("date") String date,
                         @JsonProperty("explanation") String explanation,
                         @JsonProperty("hdurl") String hdurl,
-                        @JsonProperty("media_type") String media_type,
-                        @JsonProperty("service_version") String service_version,
+                        @JsonProperty("media_type") String mediaType,
+                        @JsonProperty("service_version") String serviceVersion,
                         @JsonProperty("title") String title,
                         @JsonProperty("url") String url) {
         this.copyright = copyright;
         this.date = date;
         this.explanation = explanation;
         this.hdurl = hdurl;
-        this.media_type = media_type;
-        this.service_version = service_version;
+        this.mediaType = mediaType;
+        this.serviceVersion = serviceVersion;
         this.title = title;
         this.url = url;
     }
@@ -46,12 +44,12 @@ public class NasaResponse {
         return hdurl;
     }
 
-    public String getMedia_type() {
-        return media_type;
+    public String getMediaType() {
+        return mediaType;
     }
 
-    public String getService_version() {
-        return service_version;
+    public String getServiceVersion() {
+        return serviceVersion;
     }
 
     public String getTitle() {
@@ -79,12 +77,12 @@ public class NasaResponse {
         this.hdurl = hdurl;
     }
 
-    public void setMedia_type(String media_type) {
-        this.media_type = media_type;
+    public void setMediaType(String mediaType) {
+        this.mediaType = mediaType;
     }
 
-    public void setService_version(String service_version) {
-        this.service_version = service_version;
+    public void setServiceVersion(String serviceVersion) {
+        this.serviceVersion = serviceVersion;
     }
 
     public void setTitle(String title) {
@@ -102,8 +100,8 @@ public class NasaResponse {
                 "date: \"" + date + "\",\n" +
                 "explanation: \"" + explanation + "\",\n" +
                 "hdurl: \"" + hdurl + "\",\n" +
-                "media_type: \"" + media_type + "\",\n" +
-                "service_version: \"" + service_version + "\",\n" +
+                "media_type: \"" + mediaType + "\",\n" +
+                "service_version: \"" + serviceVersion + "\",\n" +
                 "title: \"" + title + "\",\n" +
                 "url: \"" + url + "\",\n" +
                 '}';
